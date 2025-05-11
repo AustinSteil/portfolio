@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error - Austin Steil</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/js/main.js" defer></script>
+    <style>
+        .error-page {
+            text-align: center;
+            padding: 6rem 0;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        
+        .error-message {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .error-icon {
+            font-size: 4rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">Austin Steil</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/business">Business</a></li>
+                    <li><a href="/technology">Technology</a></li>
+                    <li><a href="/clinical-care">Clinical Care</a></li>
+                    <li><a href="/safety">Safety Professional</a></li>
+                    <li><a href="/leadership">Leadership</a></li>
+                    <li><a href="/#contact" class="cta-button">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="error-page">
+            <div class="container">
+                <i class="fas fa-exclamation-triangle error-icon"></i>
+                <div class="error-code">500</div>
+                <h1 class="error-message">Server Error</h1>
+                <p>Something went wrong on our server. Please try again later or contact me if the problem persists.</p>
+                <a href="/" class="cta-button">Return to Homepage</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="/">Austin Steil</a>
+                </div>
+                <p>&copy; 2023 Austin Steil. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

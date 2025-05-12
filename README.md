@@ -138,5 +138,3 @@ Each section represents a facet of \[Your Name]'s career journey, with clear mes
 > I’m a clinically-trained healthcare professional turned product and systems thinker. I’ve led field teams, built service lines, and created digital tools that solve problems for industrial workforces. I understand the people on the floor, the leaders in the office, and the systems in between — and I know how to make them work together.
 
 ---
-
-Let me know when you're ready to start building the HTML/CSS, or if you'd like this README edited with your name and links before we begin the next step.

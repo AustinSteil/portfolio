@@ -1,25 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-
-    if (mobileMenuToggle && mainNav) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (mainNav && mainNav.classList.contains('active') &&
-            !mainNav.contains(event.target) &&
-            !mobileMenuToggle.contains(event.target)) {
-            mainNav.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        }
-    });
-
     // Smooth scrolling for anchor links (except contact button which uses popup)
     document.querySelectorAll('a[href^="#"]:not([href="#contact"])').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -33,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (targetElement) {
                 // Close mobile menu if open
+                const mainNav = document.querySelector('.main-nav');
                 if (mainNav && mainNav.classList.contains('active')) {
                     mainNav.classList.remove('active');
                     document.body.classList.remove('menu-open');

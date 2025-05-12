@@ -4,11 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Austin Steil - Professional Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Assests/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assests/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assests/favicon/favicon-16x16.png">
+    <link rel="manifest" href="Assests/favicon/site.webmanifest">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Scripts -->
     <script src="js/main.js" defer></script>
+    <script src="js/footer-copyright.js" defer></script>
+    <script src="js/contact-popup.js" defer></script>
+
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Austin Steil",
+            "jobTitle": "Occupational Health Systems Expert",
+            "description": "Clinically-trained healthcare professional turned product and systems thinker",
+            "image": "Assests/headshot.png",
+            "url": "https://austinsteil.com",
+            "sameAs": [
+                "https://www.linkedin.com/in/austinsteil/",
+                "https://github.com/austinsteil"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Meridian",
+                "addressRegion": "Idaho",
+                "addressCountry": "US"
+            },
+            "knowsAbout": [
+                "Business Strategy",
+                "Healthcare Technology",
+                "Clinical Care",
+                "Workplace Safety",
+                "Leadership"
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
     <header>
         <div class="container">
             <div class="logo">
@@ -24,23 +71,27 @@
                     <li><a href="/clinical-care">Clinical Care</a></li>
                     <li><a href="/safety">Safety Professional</a></li>
                     <li><a href="/leadership">Leadership</a></li>
-                    <li><a href="#contact" class="cta-button">Contact Me</a></li>
+                    <li><a href="#" class="cta-button">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Austin Steil</h1>
-                    <p class="tagline">Solving real-world problems at the intersection of health, tech, and operations</p>
+                    <h1>My Portfolio</h1>
+                    <p class="tagline">Occupational Health Systems Expert — Located in Meridian, Idaho</p>
                     <div class="hero-bio">
-                        <img src="img/profile.jpg" alt="Austin Steil" class="profile-image">
-                        <p>I'm a clinically-trained healthcare professional turned product and systems thinker. I've led field teams, built service lines, and created digital tools that solve problems for industrial workforces. I understand the people on the floor, the leaders in the office, and the systems in between — and I know how to make them work together.</p>
+                        <img src="Assests/headshot.png" alt="Austin Steil" class="profile-image">
+                        <p>
+                            I'm a clinically-trained healthcare professional turned product and systems thinker.
+                            I've led field teams, built service lines, and created digital tools that solve problems
+                            for industrial workforces. I understand the people on the floor, the leaders in the office,
+                            and the systems in between — and I know how to make them work together.
+                        </p>
                     </div>
-                    <a href="#expertise" class="cta-button">Explore my professional journey</a>
                 </div>
             </div>
         </section>
@@ -49,35 +100,107 @@
             <div class="container">
                 <h2>Areas of Expertise</h2>
                 <div class="expertise-grid">
-                    <div class="expertise-card">
+                    <a href="/business" class="expertise-card">
                         <i class="fas fa-chart-line"></i>
-                        <h3>Business Strategy & Operations</h3>
+                        <h3>Business</h3>
                         <p>Leading programs, building service lines, and managing resources in healthcare settings.</p>
-                        <a href="/business" class="read-more">Learn more</a>
-                    </div>
-                    <div class="expertise-card">
+                    </a>
+                    <a href="/technology" class="expertise-card">
                         <i class="fas fa-laptop-code"></i>
-                        <h3>Healthcare x Tech</h3>
+                        <h3>Technology</h3>
                         <p>Translating complex workflows into system design with practical coding and product knowledge.</p>
-                        <a href="/technology" class="read-more">Learn more</a>
-                    </div>
-                    <div class="expertise-card">
+                    </a>
+                    <a href="/clinical-care" class="expertise-card">
                         <i class="fas fa-heartbeat"></i>
-                        <h3>Clinical Foundations</h3>
+                        <h3>Clinical Care</h3>
                         <p>Licensed Athletic Trainer with strong foundation in patient care and prehospital services.</p>
-                        <a href="/clinical-care" class="read-more">Learn more</a>
-                    </div>
-                    <div class="expertise-card">
+                    </a>
+                    <a href="/safety" class="expertise-card">
                         <i class="fas fa-hard-hat"></i>
-                        <h3>Workplace Health & Safety</h3>
+                        <h3>Safety</h3>
                         <p>Building scalable systems for occupational health with OSHA compliance expertise.</p>
-                        <a href="/safety" class="read-more">Learn more</a>
-                    </div>
-                    <div class="expertise-card">
+                    </a>
+                    <a href="/leadership" class="expertise-card">
                         <i class="fas fa-users"></i>
-                        <h3>People & Program Leadership</h3>
+                        <h3>Leadership</h3>
                         <p>Managing teams across multiple sites and leading digital service model implementation.</p>
-                        <a href="/leadership" class="read-more">Learn more</a>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="timeline">
+            <div class="container">
+                <h2>Professional Journey</h2>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Current</div>
+                        <div class="timeline-content">
+                            <h3>Team Leader</h3>
+                            <p>Led creation and implementation of new digital service model across multiple sites, managing teams and developing innovative healthcare solutions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">One Term</div>
+                        <div class="timeline-content">
+                            <h3>Board Member</h3>
+                            <h4><em>Volunteer</em></h4>
+                            <p><em>Former</em> Member of Iowa Licensure 'Board of Athletic Training'.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h3>Master's Degree</h3>
+                            <p>Completed Master of Healthcare Administration degree from Colorado State University.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Athletic Trainer</h3>
+                            <h4>Virtual Services</h4>
+                            <p>Built and designed a specialized electronic medical record system for occupational health settings, focusing on workflow optimization and compliance reporting.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021 - 2022</div>
+                        <div class="timeline-content">
+                            <h3>Athletic Trainer</h3>
+                            <h4>1st Shift</h4>
+                            <p>Managed onsite athletic training programs for industrial settings, implementing OSHA-compliant safety programs and reducing workplace injuries.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2019 - 2021</div>
+                        <div class="timeline-content">
+                            <h3>Athletic Trainer</h3>
+                            <h4>3rd Shift</h4>
+                            <p>Provided direct patient care in various settings, from acute injury management to rehabilitation and return-to-activity planning.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2019</div>
+                        <div class="timeline-content">
+                            <h3>Bachelor's Degree</h3>
+                            <p>Completed bachelors degree in Athletic Training from Upper Iowa University.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2017 - 2019</div>
+                        <div class="timeline-content">
+                            <h3>EMT</h3>
+                            <h4><em>Volunteer</em></h4>
+                            <p>Provided emergency medical care in rural communities as and emergency medical technician.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,31 +208,23 @@
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2>Get In Touch</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <p>Interested in connecting? Reach out via email or social media.</p>
-                        <ul class="social-links">
-                            <li><a href="https://linkedin.com/in/austinsteil" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                            <li><a href="mailto:contact@austinsteil.com"><i class="fas fa-envelope"></i> contact@austinsteil.com</a></li>
-                            <li><a href="https://github.com/austinsteil" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                        </ul>
-                    </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
+                <div class="contact-slim">
+                    <a href="tel:+15158908456" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>(515) 890-8456</span>
+                    </a>
+                    <a href="mailto:austinsteil21@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>austinsteil21@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/austinsteil/" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/austinsteil" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -118,14 +233,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="/">Austin Steil</a>
-                </div>
-                <p>&copy; 2023 Austin Steil. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/sitemap.xml">Sitemap</a>
-                </div>
+                <div id="copyright-footer"></div>
             </div>
         </div>
     </footer>

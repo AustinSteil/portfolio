@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Error - Austin Steil</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/Assests/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Assests/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Assests/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/Assests/favicon/site.webmanifest">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/print.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Scripts -->
     <script src="/js/main.js" defer></script>
+    <script src="/js/footer-copyright.js" defer></script>
+    <script src="/js/contact-popup.js" defer></script>
     <style>
         .error-page {
             text-align: center;
@@ -17,7 +30,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .error-code {
             font-size: 8rem;
             font-weight: bold;
@@ -25,12 +38,12 @@
             margin-bottom: 1rem;
             line-height: 1;
         }
-        
+
         .error-message {
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
-        
+
         .error-icon {
             font-size: 4rem;
             color: var(--secondary-color);
@@ -54,7 +67,7 @@
                     <li><a href="/clinical-care">Clinical Care</a></li>
                     <li><a href="/safety">Safety Professional</a></li>
                     <li><a href="/leadership">Leadership</a></li>
-                    <li><a href="/#contact" class="cta-button">Contact Me</a></li>
+                    <li><a href="#" class="cta-button">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,14 +88,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="/">Austin Steil</a>
-                </div>
-                <p>&copy; 2023 Austin Steil. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/sitemap.xml">Sitemap</a>
-                </div>
+                <div id="copyright-footer"></div>
             </div>
         </div>
     </footer>

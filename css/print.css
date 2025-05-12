@@ -1,0 +1,141 @@
+/**
+ * Print Styles for Austin Steil Portfolio
+ * 
+ * These styles are applied when the user prints any page from the website.
+ * They optimize the content for printing by removing unnecessary elements,
+ * adjusting colors, and formatting the content for better readability on paper.
+ */
+
+@media print {
+    /* General Print Styles */
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 12pt;
+        line-height: 1.5;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Hide non-essential elements */
+    header, 
+    .mobile-menu-toggle,
+    .main-nav,
+    footer,
+    .cta-button,
+    .download-button {
+        display: none !important;
+    }
+
+    /* Show the logo for branding */
+    .logo {
+        display: block !important;
+        text-align: center;
+        margin-bottom: 1cm;
+        font-size: 24pt;
+        font-weight: bold;
+    }
+
+    /* Adjust container width */
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Adjust headings */
+    h1 {
+        font-size: 24pt;
+        margin-bottom: 0.5cm;
+    }
+
+    h2 {
+        font-size: 18pt;
+        margin-top: 1cm;
+        margin-bottom: 0.5cm;
+        page-break-after: avoid;
+    }
+
+    h3 {
+        font-size: 14pt;
+        margin-top: 0.5cm;
+        page-break-after: avoid;
+    }
+
+    /* Adjust paragraphs */
+    p {
+        margin-bottom: 0.5cm;
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Ensure links are readable */
+    a {
+        color: #000 !important;
+        text-decoration: underline;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-style: italic;
+    }
+
+    /* Adjust expertise cards for print */
+    .expertise-grid {
+        display: block !important;
+    }
+
+    .expertise-card {
+        page-break-inside: avoid;
+        margin-bottom: 1cm;
+        border: 1px solid #ccc;
+        padding: 0.5cm;
+        box-shadow: none !important;
+    }
+
+    /* Adjust expertise details */
+    .expertise-detail .container {
+        display: block !important;
+    }
+
+    .expertise-content,
+    .expertise-sidebar {
+        width: 100% !important;
+    }
+
+    .expertise-highlights {
+        display: block !important;
+    }
+
+    .highlight-item {
+        margin-bottom: 0.5cm;
+        page-break-inside: avoid;
+    }
+
+    /* Ensure page breaks are clean */
+    section {
+        page-break-inside: avoid;
+    }
+
+    /* Add a footer with URL and page numbers */
+    @page {
+        margin: 2cm;
+    }
+
+    @page:first {
+        margin-top: 3cm;
+    }
+
+    /* Add print-only elements */
+    main:after {
+        content: "Printed from austinsteil.com";
+        display: block;
+        text-align: center;
+        font-size: 10pt;
+        margin-top: 2cm;
+        font-style: italic;
+    }
+}

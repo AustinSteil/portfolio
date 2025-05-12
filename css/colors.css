@@ -1,0 +1,49 @@
+/* 
+ * Color Variables for Austin Steil Portfolio
+ * This file contains all color variables used throughout the site
+ * Update these variables to easily change the color scheme site-wide
+ */
+
+:root {
+    /* Primary Colors */
+    --primary-color: #2c3e50;        /* Dark blue/slate - Main brand color */
+    --secondary-color: #3498db;      /* Bright blue - Accent color for interactive elements */
+    --accent-color: #e74c3c;         /* Red - Used for highlights and important elements */
+    
+    /* Background Colors */
+    --background-light: #ffffff;     /* White - Main background color */
+    --background-off-white: #f8f9fa; /* Off-white - Secondary background color */
+    --background-light-gray: #ecf0f1; /* Light gray - Used for cards and sections */
+    --background-medium: #e9ecef;    /* Medium gray - Used for alternate sections */
+    --background-dark: #2c3e50;      /* Dark blue/slate - Used for footer and dark sections */
+    
+    /* Text Colors */
+    --text-dark: #333333;            /* Dark gray - Primary text color */
+    --text-medium: #666666;          /* Medium gray - Secondary text color */
+    --text-light: #ffffff;           /* White - Text on dark backgrounds */
+    --text-muted: #999999;           /* Light gray - Muted text color */
+    
+    /* Border Colors */
+    --border-light: #dddddd;         /* Light gray - Light borders */
+    --border-medium: #cccccc;        /* Medium gray - Medium borders */
+    --border-dark: #2c3e50;          /* Dark blue/slate - Dark borders */
+    
+    /* Status Colors */
+    --success-color: #27ae60;        /* Green - Success messages */
+    --warning-color: #f39c12;        /* Orange - Warning messages */
+    --error-color: #e74c3c;          /* Red - Error messages */
+    --info-color: #3498db;           /* Blue - Information messages */
+    
+    /* Shadow Colors */
+    --shadow-light: rgba(0, 0, 0, 0.1);  /* Light shadow */
+    --shadow-medium: rgba(0, 0, 0, 0.15); /* Medium shadow */
+    --shadow-dark: rgba(0, 0, 0, 0.2);   /* Dark shadow */
+    
+    /* Overlay Colors */
+    --overlay-light: rgba(255, 255, 255, 0.8); /* Light overlay */
+    --overlay-dark: rgba(44, 62, 80, 0.8);     /* Dark overlay */
+    
+    /* Gradient Colors */
+    --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Primary gradient */
+    --gradient-secondary: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); /* Secondary gradient */
+}

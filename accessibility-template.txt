@@ -1,0 +1,9 @@
+<body class="page-PAGENAME">
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <header>
+
+...
+
+    </header>
+
+    <main id="main-content">

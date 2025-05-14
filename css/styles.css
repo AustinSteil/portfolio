@@ -135,6 +135,13 @@ header .container {
     width: 100%;
 }
 
+/* Ensure the navigation has enough space */
+header .container .main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .logo a {
     color: white;
     font-size: 1.5rem;
@@ -148,7 +155,7 @@ header .container {
 }
 
 .main-nav li {
-    margin-left: 1.5rem;
+    margin-left: 1.2rem; /* Reduced from 1.5rem to fit better */
     display: flex;
     align-items: center;
 }
@@ -160,6 +167,7 @@ header .container {
     position: relative;
     display: inline-flex;
     align-items: center;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .main-nav a:hover,
@@ -920,6 +928,20 @@ body.popup-open {
     .expertise-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* Adjust navigation spacing for medium screens */
+    .main-nav li {
+        margin-left: 0.8rem;
+    }
+
+    .main-nav a {
+        font-size: 0.95rem;
+    }
+
+    .main-nav .cta-button {
+        padding: 0.5rem 1rem;
+        min-width: 100px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -990,6 +1012,7 @@ body.popup-open {
         width: 100%;
         padding: 0.5rem 0;
         font-size: 1.1rem;
+        white-space: normal; /* Allow wrapping in mobile view */
     }
 
     .main-nav a.active {

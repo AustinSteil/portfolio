@@ -3,6 +3,7 @@
  * 
  * Author: Austin Steil
  * Version: 1.0.0
+ * Last Updated: 2025-05-12
  *
  * This script automatically generates a copyright footer with the current year.
  * i.e. © 2023 Austin Steil. All rights reserved.

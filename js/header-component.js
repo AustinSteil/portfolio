@@ -3,6 +3,7 @@
  *
  * Author: Austin Steil
  * Version: 1.0.0
+ * Last Updated: 2025-05-12
  *
  * This script automatically generates a consistent header across all pages of the website.
  * It creates the logo, navigation menu, and mobile menu toggle, and handles the mobile menu functionality.
@@ -121,12 +122,12 @@ const NAVIGATION_ITEMS = [
         key: "technology"
     },
     {
-        text: "Clinical Care",
+        text: "Clinician",
         url: "/clinical-care",
         key: "clinical-care"
     },
     {
-        text: "Safety Professional",
+        text: "EHS",
         url: "/safety",
         key: "safety"
     },
@@ -140,7 +141,7 @@ const NAVIGATION_ITEMS = [
 // Contact button configuration
 const CONTACT_BUTTON = {
     text: "Contact Me",
-    url: "#",
+    url: "#contact", // This will be used as an identifier, not an actual URL
     class: "cta-button"
 };
 // =========================
@@ -299,7 +300,16 @@ function setupMobileMenu() {
     // Add click event listeners to navigation links to close menu when clicked
     const navLinks = mainNav.querySelectorAll('a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
+            // Handle contact button click
+            if (link.classList.contains('cta-button')) {
+                e.preventDefault();
+                // Check if openContactPopup function exists (from contact-popup.js)
+                if (typeof openContactPopup === 'function') {
+                    openContactPopup();
+                }
+            }
+
             // Only close the menu on mobile
             if (window.innerWidth <= 768) {
                 mainNav.classList.remove('active');

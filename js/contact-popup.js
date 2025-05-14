@@ -3,6 +3,7 @@
  *
  * Author: Austin Steil
  * Version: 1.1.0
+ * Last Updated: 2025-05-12
  *
  * This script creates a popup with contact information when the "Contact Me" button is clicked.
  * The popup displays social links and contact information in a modal dialog with a darkened overlay.

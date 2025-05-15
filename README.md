@@ -1,28 +1,28 @@
-# Professional Portfolio Website for Austin Steil
+# Portfolio Website for Austin Steil
 
 ## Project Purpose
 
-This project is a personal portfolio website designed to showcase the unique, interdisciplinary professional background and talents of \[Your Name]. The goal is to present a comprehensive, web-based resume that balances healthcare, business, and technology experience — not as a traditional software engineering portfolio, but as an executive overview of capabilities across multiple industries.
+This project is a personal portfolio website designed to showcase my unique, interdisciplinary professional background and talents as an Occupational Health Systems Expert. The goal is to present a comprehensive, web-based resume that balances healthcare, business, and technology experience — not as a traditional software engineering portfolio, but as an executive overview of my capabilities across multiple industries.
 
-This portfolio should function as an interactive online resume that highlights the following professional areas:
+This portfolio functions as an interactive online resume that highlights the following professional areas:
 
-* Business
-* Technology
-* Clinical Care
-* Safety Professional
-* Leadership
+* Business Strategy & Operations
+* Healthcare Technology
+* Clinical Care Experience
+* Workplace Health & Safety
+* People & Program Leadership
 
-Each section represents a facet of \[Your Name]'s career journey, with clear messaging around transferable skills, past experiences, and potential value in various professional opportunities.
+Each section represents a facet of my career journey, with clear messaging around transferable skills, past experiences, and potential value in various professional opportunities.
 
 ---
 
 ## Website Goals
 
-* Serve as a web-based version of \[Your Name]'s professional profile.
-* Showcase unique qualifications and intersections between clinical, business, and tech skills.
-* Communicate fluency in translating real-world needs into actionable systems, whether in the field or through digital tools.
+* Serve as a web-based version of my professional profile, accessible at [austinsteil.com](https://austinsteil.com).
+* Showcase my unique qualifications and intersections between clinical, business, and tech skills.
+* Communicate my fluency in translating real-world needs into actionable systems, whether in the field or through digital tools.
 * Inspire confidence in hiring managers, collaborators, or partners interested in working with a tech-savvy healthcare professional.
-* Include links or references to projects or companies (e.g. OccuHelp) where relevant.
+* Provide downloadable resume PDFs tailored to each professional area.
 
 ---
 
@@ -32,15 +32,15 @@ Each section represents a facet of \[Your Name]'s career journey, with clear mes
 * Health and safety directors hiring for innovative program leads.
 * Startup founders or healthcare tech companies seeking someone with clinical understanding and product design sense.
 * Employers looking for non-traditional technologists who understand care delivery systems.
+* Occupational health organizations seeking expertise in program development and implementation.
 
 ---
 
-## Website Structure
+## Implemented Website Structure
 
 ### 1. **Hero/Landing Section**
 
 * Name + brief tagline (e.g., “Solving real-world problems at the intersection of health, tech, and operations”)
-* Short bio with photo (optional)
 * CTA: "Learn more about what I do" or "Explore my professional journey"
 
 ---
@@ -52,7 +52,6 @@ Each section represents a facet of \[Your Name]'s career journey, with clear mes
 * Experience leading programs, building service lines, managing budgets and resources.
 * Master's in Healthcare Administration.
 * Strong understanding of business infrastructure in healthcare settings.
-* Startup experience — built OccuHelp, a niche EMR.
 * Examples of turning ideas into operational models.
 * Can speak business language with clinicians, and vice versa.
 
@@ -65,7 +64,7 @@ Each section represents a facet of \[Your Name]'s career journey, with clear mes
 * Self-taught coder and product thinker.
 * Understanding of software structure, databases, front/back-end logic.
 * Built and designed workflows using Blockly and other tools.
-* Familiar with SQL, web architecture, EMR systems.
+* Familiar with SQL (Kind of), web architecture, EMR systems.
 * Strong skill in translating complex workflows into system design.
 * Not a traditional engineer, but very capable in tech-facing roles.
 
@@ -98,7 +97,6 @@ Each section represents a facet of \[Your Name]'s career journey, with clear mes
 
 **Header Idea:** "People & Program Leadership"
 
-* Managed teams across multiple sites.
 * Promoted from clinician to site lead to service line developer.
 * Led creation and implementation of new digital service model.
 * Effective communicator across org levels.
@@ -106,22 +104,27 @@ Each section represents a facet of \[Your Name]'s career journey, with clear mes
 
 ---
 
-## Technical Stack (Frontend)
+## Technical Implementation
 
-* HTML5 + CSS3 (Tailwind or custom styling for responsiveness)
-* JavaScript (only if needed for UI interactions)
-* Lightweight, responsive layout — minimal framework dependency
-* Optional: deploy using GitHub Pages, Netlify, or Vercel
+* HTML5 + CSS3 with custom styling for responsiveness
+* Vanilla JavaScript for interactive components
+* Modular component architecture with reusable header, footer, and contact components
+* Custom cookie consent management system with Google Analytics integration (G-MVD9DZT628)
+* Mobile-first responsive design
+* Deployed using GitHub Pages with custom domain (austinsteil.com)
+* SEO optimization with structured data (Schema.org)
 
 ---
 
-## Optional Enhancements
+## Implemented Features
 
-* Include a PDF version of the resume
-* Add a contact form or email link
-* Embed links or demo visuals for OccuHelp or similar projects
-* Basic theming (dark/light mode, accessible design)
-* A visual timeline or journey map
+* Downloadable PDF versions of resume for each professional area
+* Contact popup with email, phone, and social media links
+* Professional timeline showing career progression
+* Mobile-responsive navigation with hamburger menu
+* Expertise cards for easy navigation to specialized sections
+* Accessibility features including proper semantic HTML and focus states
+* Privacy policy page with detailed cookie information
 
 ---
 
@@ -133,8 +136,20 @@ Each section represents a facet of \[Your Name]'s career journey, with clear mes
 
 ---
 
-## Summary Statement (Suggested for Home Page)
+## Summary Statement
 
 > I’m a clinically-trained healthcare professional turned product and systems thinker. I’ve led field teams, built service lines, and created digital tools that solve problems for industrial workforces. I understand the people on the floor, the leaders in the office, and the systems in between — and I know how to make them work together.
+
+---
+
+## About Me
+
+I'm Austin Steil, an Occupational Health Systems Expert based in Meridian, Idaho. My professional background spans multiple disciplines:
+
+* **Education**: Master's in Healthcare Administration from Colorado State University (2024), Bachelor's of Science from Upper Iowa University (2019)
+* **Clinical Background**: Licensed Athletic Trainer (Iowa), Board of Certification Certified, former EMT
+* **Technical Skills**: Self-taught web developer with experience in HTML, CSS, JavaScript, and system architecture
+* **Business Experience**: Program leadership and service line development.
+* **Contact**: (515) 890-8456 | austinsteil21@gmail.com | [LinkedIn](https://www.linkedin.com/in/austinsteil/) | [GitHub](https://github.com/austinsteil)
 
 ---

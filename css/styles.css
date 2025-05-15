@@ -608,6 +608,220 @@ footer {
     text-align: center;
 }
 
+/* Privacy Policy Page Styles */
+.page-privacy header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-privacy .logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.page-privacy .main-nav a {
+    color: white;
+}
+
+.page-privacy .menu-line {
+    background-color: white;
+}
+
+.page-privacy .privacy-content {
+    padding: 3rem 0;
+    background-color: var(--background-light);
+}
+
+.page-privacy .content-block {
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--background-light-gray);
+}
+
+.page-privacy .content-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.page-privacy h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.page-privacy h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin: 1.5rem 0 0.8rem;
+}
+
+.page-privacy p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+.page-privacy ul {
+    margin-bottom: 1.2rem;
+    padding-left: 1.5rem;
+}
+
+.page-privacy li {
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+
+.page-privacy .privacy-content a:not(.back-to-top) {
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--secondary-color);
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.page-privacy .privacy-content a:not(.back-to-top):hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+/* Ensure header navigation links don't have dotted underlines */
+.page-privacy header a {
+    border-bottom: none !important;
+}
+
+.page-privacy .cta-button {
+    border-bottom: none !important;
+}
+
+.page-privacy .last-updated {
+    font-style: italic;
+    color: var(--text-medium);
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* Table of Contents Styles */
+.page-privacy .table-of-contents {
+    background-color: var(--background-light-gray);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+.page-privacy .table-of-contents h2 {
+    margin-bottom: 1rem;
+    border-bottom: none;
+    color: var(--primary-color);
+}
+
+.page-privacy .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.page-privacy .toc-list li {
+    margin-bottom: 0.8rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.page-privacy .toc-list a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-bottom: none !important;
+    padding: 0.3rem 0;
+    display: inline-block;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.page-privacy .toc-list a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+.page-privacy {
+    scroll-padding-top: 100px; /* Adjust based on your header height */
+}
+
+@media (max-width: 768px) {
+    .page-privacy .toc-list {
+        columns: 1;
+    }
+
+    .page-privacy .table-of-contents {
+        padding: 1.2rem 1.5rem;
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: white !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    transform: translateY(20px);
+    border: none;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.back-to-top i {
+    font-size: 1.2rem;
+    color: white !important;
+}
+
+@media (max-width: 576px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
 .download-button {
     display: inline-block;
     background-color: var(--secondary-color);

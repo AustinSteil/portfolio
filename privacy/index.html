@@ -22,6 +22,31 @@
     <script src="../js/contact-popup.js" defer></script>
     <script src="../js/header-component.js" defer></script>
     <script src="../js/cookies-consent.js" defer></script>
+
+    <!-- Back to Top Button Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+
+            // Show/hide the button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+
+            // Smooth scroll to top when clicked
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </head>
 <body class="page-privacy">
     <div id="site-header"></div>
@@ -34,14 +59,32 @@
         </section>
 
         <section class="privacy-content">
+            <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top" style="border-bottom: none;">
+                <i class="fas fa-arrow-up"></i>
+            </a>
             <div class="container">
-                <div class="content-block">
+                <div class="content-block table-of-contents">
+                    <h2>Contents</h2>
+                    <ul class="toc-list">
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#information-collected">Information I Collect</a></li>
+                        <li><a href="#information-use">How I Use Your Information</a></li>
+                        <li><a href="#cookies">Cookies and Tracking Technologies</a></li>
+                        <li><a href="#third-party">Third-Party Services</a></li>
+                        <li><a href="#security">Data Security</a></li>
+                        <li><a href="#rights">Your Rights</a></li>
+                        <li><a href="#changes">Changes to This Privacy Policy</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div id="introduction" class="content-block">
                     <h2>Introduction</h2>
-                    <p>This Privacy Policy outlines how Austin Steil ("I", "me", or "my") collects, uses, and protects your information when you visit my website at austinsteil.com ("the Website").</p>
+                    <p>This Privacy Policy outlines how Austin Steil ("I", "me", or "my") collects, uses, and protects your information when you visit my website at <a href="https://www.austinsteil.com" target="_blank">austinsteil.com</a> ("the Website").</p>
                     <p>I respect your privacy and am committed to protecting your personal data. This policy will inform you about how I look after your personal data when you visit my website and tell you about your privacy rights and how the law protects you.</p>
                 </div>
 
-                <div class="content-block">
+                <div id="information-collected" class="content-block">
                     <h2>Information I Collect</h2>
                     <p>When you visit my website, I may collect the following types of information:</p>
                     <ul>
@@ -51,7 +94,7 @@
                     </ul>
                 </div>
 
-                <div class="content-block">
+                <div id="information-use" class="content-block">
                     <h2>How I Use Your Information</h2>
                     <p>I use the information I collect for the following purposes:</p>
                     <ul>
@@ -62,7 +105,7 @@
                     </ul>
                 </div>
 
-                <div class="content-block">
+                <div id="cookies" class="content-block">
                     <h2>Cookies and Tracking Technologies</h2>
                     <p>My website uses cookies and similar tracking technologies to track activity on my website and hold certain information. Cookies are files with small amounts of data which may include an anonymous unique identifier.</p>
 
@@ -85,7 +128,7 @@
                     <p>Please note that if you choose to reject cookies, you may not be able to use some portions of my website.</p>
                 </div>
 
-                <div class="content-block">
+                <div id="third-party" class="content-block">
                     <h2>Third-Party Services</h2>
                     <p>I use third-party services to monitor and analyze the use of my website. These third parties have their own privacy policies addressing how they use such information.</p>
 
@@ -96,12 +139,12 @@
                     <p>You can learn more about how Google uses your data at <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.</p>
                 </div>
 
-                <div class="content-block">
+                <div id="security" class="content-block">
                     <h2>Data Security</h2>
                     <p>I implement appropriate security measures to protect your personal information. However, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
                 </div>
 
-                <div class="content-block">
+                <div id="rights" class="content-block">
                     <h2>Your Rights</h2>
                     <p>Depending on your location, you may have certain rights regarding your personal data, including:</p>
                     <ul>
@@ -113,16 +156,16 @@
                     </ul>
                 </div>
 
-                <div class="content-block">
+                <div id="changes" class="content-block">
                     <h2>Changes to This Privacy Policy</h2>
                     <p>I may update this Privacy Policy from time to time. I will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
                     <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
                 </div>
 
-                <div class="content-block">
+                <div id="contact" class="content-block">
                     <h2>Contact Me</h2>
                     <p>If you have any questions about this Privacy Policy, please contact me at:</p>
-                    <p><a href="mailto:contact@austinsteil.com">contact@austinsteil.com</a></p>
+                    <p><a href="mailto:austinsteil21@gmail.com">austinsteil21@gmail.com</a></p>
                 </div>
 
                 <div class="content-block">

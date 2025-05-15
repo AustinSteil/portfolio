@@ -99,6 +99,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
+ * Function to reopen the cookie banner
+ * This can be called from other scripts or links to allow users to manage their cookie preferences
+ */
+window.reopenCookieBanner = function() {
+    // Clear existing consent
+    setCookie(COOKIE_NAME, "", -1);
+
+    // Show banner again
+    createCookieBanner();
+};
+
+/**
  * Initializes the cookie consent functionality
  * Checks if the user has already provided consent and acts accordingly
  */

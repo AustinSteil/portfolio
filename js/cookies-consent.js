@@ -3,7 +3,7 @@
  *
  * Author: Austin Steil
  * Version: 1.0.0
- * Last Updated: 2023-05-15
+ * Last Updated: 2025-05-14
  *
  * This script manages cookie consent across the website, displaying a cookie banner
  * and handling user preferences for cookie usage. It implements a GDPR-compliant

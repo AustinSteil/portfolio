@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initCookieConsent() {
     // Check if user has already made a choice
     const userConsent = getCookie(COOKIE_NAME);
-    
+
     if (userConsent === "all") {
         // User has accepted all cookies, load Google Analytics
         loadGoogleAnalytics();
@@ -124,23 +124,23 @@ function createCookieBanner() {
     // Create the banner container
     const banner = document.createElement('div');
     banner.className = `cookie-banner ${BANNER_POSITION} ${BANNER_THEME}`;
-    
+
     // Create the banner content
     const bannerContent = document.createElement('div');
     bannerContent.className = 'cookie-banner-content';
-    
+
     // Add title
     const title = document.createElement('h3');
     title.textContent = COOKIE_BANNER_TITLE;
-    
+
     // Add description text
     const description = document.createElement('p');
     description.textContent = COOKIE_BANNER_TEXT;
-    
+
     // Create buttons container
     const buttonsContainer = document.createElement('div');
     buttonsContainer.className = 'cookie-banner-buttons';
-    
+
     // Create "Accept All" button
     const acceptAllButton = document.createElement('button');
     acceptAllButton.className = 'cookie-accept-all';
@@ -148,7 +148,7 @@ function createCookieBanner() {
     acceptAllButton.addEventListener('click', function() {
         acceptAllCookies();
     });
-    
+
     // Create "Accept Only Necessary" button
     const acceptNecessaryButton = document.createElement('button');
     acceptNecessaryButton.className = 'cookie-accept-necessary';
@@ -156,27 +156,27 @@ function createCookieBanner() {
     acceptNecessaryButton.addEventListener('click', function() {
         acceptNecessaryCookies();
     });
-    
+
     // Create privacy policy link
     const privacyLink = document.createElement('a');
     privacyLink.href = PRIVACY_POLICY_URL;
     privacyLink.className = 'cookie-privacy-link';
     privacyLink.textContent = PRIVACY_POLICY_TEXT;
-    
+
     // Assemble the banner
     buttonsContainer.appendChild(acceptAllButton);
     buttonsContainer.appendChild(acceptNecessaryButton);
     buttonsContainer.appendChild(privacyLink);
-    
+
     bannerContent.appendChild(title);
     bannerContent.appendChild(description);
     bannerContent.appendChild(buttonsContainer);
-    
+
     banner.appendChild(bannerContent);
-    
+
     // Add the banner to the page
     document.body.appendChild(banner);
-    
+
     // Add CSS for the banner
     addBannerStyles();
 }
@@ -187,7 +187,7 @@ function createCookieBanner() {
 function addBannerStyles() {
     // Create a style element
     const style = document.createElement('style');
-    
+
     // Define the CSS
     const css = `
         .cookie-banner {
@@ -201,42 +201,42 @@ function addBannerStyles() {
             display: flex;
             justify-content: center;
         }
-        
+
         .cookie-banner.bottom {
             bottom: 0;
         }
-        
+
         .cookie-banner.top {
             top: 0;
         }
-        
+
         .cookie-banner.dark {
             background-color: var(--primary-color);
             color: var(--text-light);
         }
-        
+
         .cookie-banner-content {
             max-width: 1200px;
             width: 90%;
             margin: 0 auto;
         }
-        
+
         .cookie-banner h3 {
             margin-top: 0;
             margin-bottom: 0.5rem;
         }
-        
+
         .cookie-banner p {
             margin-bottom: 1rem;
         }
-        
+
         .cookie-banner-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             align-items: center;
         }
-        
+
         .cookie-accept-all {
             background-color: var(--secondary-color);
             color: white;
@@ -247,11 +247,11 @@ function addBannerStyles() {
             font-weight: 500;
             transition: background-color var(--transition-speed) ease;
         }
-        
+
         .cookie-accept-all:hover {
             background-color: var(--accent-color);
         }
-        
+
         .cookie-accept-necessary {
             background-color: transparent;
             border: 1px solid var(--border-medium);
@@ -261,32 +261,32 @@ function addBannerStyles() {
             font-weight: 500;
             transition: background-color var(--transition-speed) ease;
         }
-        
+
         .cookie-accept-necessary:hover {
             background-color: var(--background-light-gray);
         }
-        
+
         .cookie-privacy-link {
             margin-left: auto;
             font-size: 0.9rem;
         }
-        
+
         @media (max-width: 768px) {
             .cookie-banner-buttons {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            
+
             .cookie-privacy-link {
                 margin-left: 0;
                 margin-top: 0.5rem;
             }
         }
     `;
-    
+
     // Add the CSS to the style element
     style.appendChild(document.createTextNode(css));
-    
+
     // Add the style element to the head
     document.head.appendChild(style);
 }
@@ -298,10 +298,10 @@ function addBannerStyles() {
 function acceptAllCookies() {
     // Set cookie to remember user's choice
     setCookie(COOKIE_NAME, "all", COOKIE_EXPIRATION_DAYS);
-    
+
     // Load Google Analytics
     loadGoogleAnalytics();
-    
+
     // Remove the banner
     removeBanner();
 }
@@ -313,7 +313,7 @@ function acceptAllCookies() {
 function acceptNecessaryCookies() {
     // Set cookie to remember user's choice
     setCookie(COOKIE_NAME, "necessary", COOKIE_EXPIRATION_DAYS);
-    
+
     // Remove the banner
     removeBanner();
 }
@@ -336,16 +336,18 @@ function loadGoogleAnalytics() {
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
     gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-    
+
     // Create the second script element (configuration)
     const configScript = document.createElement('script');
     configScript.textContent = `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '${GA_TRACKING_ID}');
+        gtag('config', '${GA_TRACKING_ID}', {
+            'anonymize_ip': true
+        });
     `;
-    
+
     // Add the scripts to the document
     document.head.appendChild(gtagScript);
     document.head.appendChild(configScript);
@@ -353,43 +355,43 @@ function loadGoogleAnalytics() {
 
 /**
  * Sets a cookie with the given name, value, and expiration days
- * 
+ *
  * @param {string} name - The name of the cookie
  * @param {string} value - The value to store in the cookie
  * @param {number} days - The number of days until the cookie expires
  */
 function setCookie(name, value, days) {
     let expires = "";
-    
+
     if (days) {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
     }
-    
+
     document.cookie = name + "=" + value + expires + "; path=/; SameSite=Lax";
 }
 
 /**
  * Gets the value of a cookie by name
- * 
+ *
  * @param {string} name - The name of the cookie to retrieve
  * @returns {string|null} The cookie value or null if not found
  */
 function getCookie(name) {
     const nameEQ = name + "=";
     const cookies = document.cookie.split(';');
-    
+
     for (let i = 0; i < cookies.length; i++) {
         let cookie = cookies[i];
         while (cookie.charAt(0) === ' ') {
             cookie = cookie.substring(1, cookie.length);
         }
-        
+
         if (cookie.indexOf(nameEQ) === 0) {
             return cookie.substring(nameEQ.length, cookie.length);
         }
     }
-    
+
     return null;
 }
